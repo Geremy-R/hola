@@ -1,0 +1,36 @@
+html{
+    font-family: "Be vietnam pro", sans-serif;
+/*para que la pagina vaya lento*/
+   scroll-behavior: smooth;    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+/*display flex se utiliza para tal cosa*/
+header{
+    background-color: white;
+}
+
+.inline-container {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    gap:18px;
+}
+
+/* button-- como para poner un boton*/
+/*es para saber de donde nace cada elemento, para evitar errores*/
+/* */
+.--button{
+    display: flex;
+    padding-inline: 16px;
+    padding-block: 8px;
+    border: 1px solid #e4e4e4;
+}
