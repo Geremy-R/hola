@@ -1,0 +1,514 @@
+/* ==========================================
+   VARIABLES GLOBALES
+   ========================================== */
+:root{
+    --white: #ffffff;
+    --cultured: hsl(225, 20%, 96%);
+    --onyx: hsl(207, 8%, 21%);;
+    --gray-white: #F2F2F2;
+    --gray: #333333;
+    --gray-medium: #E4E4E4;
+    --gray-strong: #cbcbcb;
+    --gray-semi-strong: #F6F5F6;
+    --black: #000000;
+    --blue-lite: #DCE6FA;
+    --blue-main: #ae63e0;
+    --blue-dark: #410575;
+    --blue-full-dark: #4b2585;
+    --blue-alternative: #9520f4;
+    --blue-death: #F5FAFF;
+    --gray-main: #6B7280;
+}
+
+/* ==========================================
+   ESTILOS BASE
+   ========================================== */
+html{
+    font-family: "Be vietnam pro", sans-serif;
+    scroll-behavior: smooth;    
+}
+
+*,*::before, ::after{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    background-color: #1a1f3d;
+}
+
+/* ==========================================
+   UTILIDADES Y CLASES COMUNES
+   ========================================== */
+.--inline-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 42px;
+}
+
+.--block-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modificadores */
+.--gap-8{ gap: 24px; }
+.--gap-10{ gap: 10px; }
+.--gap-12{ gap: 12px; }
+.--no-beetwen{ justify-content: initial; }
+.--no-padding-inline{ padding-inline: initial; }
+.--text-centered{ text-align: center; }
+.--bold{ font-weight: 600; }
+.--flex-centered{
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================
+   HEADER Y NAVEGACIÓN
+   ========================================== */
+header{
+    background-color: #1a1f3d;
+    height: 72px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo{
+    font-size: 24px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+    display: flex;
+    background-image: url(dark-abstract-blue-light-background-gradient-shapes-navy-blue-hexagon-mesh-pattern-decoration-vector.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.first-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-inline: 160px;
+    padding-block: 140px;
+}
+
+/* ==========================================
+   CARDS Y SECCIONES
+   ========================================== */
+.--three-cards-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 48px;
+    justify-items: center;
+}
+
+.material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.material-symbols-outlined svg {
+    width: 40px;  /* Hacemos los iconos un poco más grandes */
+    height: 40px;
+    margin: 0 auto;
+}
+
+.--card {
+    width: 330px;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+    display: flex;           /* Agregamos display flex */
+    flex-direction: column;  /* Organizamos el contenido en columna */
+    align-items: center;     /* Centramos todos los elementos */
+}
+
+.--card p {
+    color: var(--black);
+}
+
+.--subtitle{
+    font-size: 1.25rem;
+    color: #1a1f3d;
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================================
+   BOTONES Y ENLACES
+   ========================================== */
+.--link{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    position: relative;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.--button-primary, .--button-secondary {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 6px;
+    color: var(--white);
+    font-weight: 600;
+    background-color: #4a90e2;
+}
+
+.--button-primary:hover, .--button-secondary:hover {
+    background-color: #4a90e2;
+    transform: none;
+}
+
+/* Estilo específico para el botón de login */
+.--button {
+    padding: 8px 24px;
+    border: 1px solid #4a90e2;
+    border-radius: 6px;
+    color: #4a90e2;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.--button:hover {
+    background-color: #4a90e2;
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   FOOTER Y NEWSLETTER
+   ========================================== */
+.footer {
+    background-color: #1a1f3d;
+    padding: 60px 0 20px 0;
+    color: var(--white);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--cultured);
+}
+
+.footer-section p {
+    color: var(--cultured);
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+    color: var(--cultured);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    color: var(--cultured);
+}
+
+/* Redes Sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 24px;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background-color: #4a90e2;
+}
+
+/* ==========================================
+   FORMULARIO DE LOGIN
+   ========================================== */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 72px);
+    padding: 2rem;
+    background-color: rgba(26, 31, 61, 0.9);
+}
+
+.login-box {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-box .--title {
+    color: #1a1f3d;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form-group label {
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.form-group input {
+    padding: 1rem;
+    border: 1.5px solid var(--gray-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.form-options input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #4a90e2;
+}
+
+.forgot-password {
+    color: #4a90e2;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
+.login-form .--button-primary {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-form .--button-primary:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+.register-link {
+    text-align: center;
+    color: var(--gray);
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.register-link a {
+    color: #4a90e2;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.register-link a:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   MEDIA QUERIES
+   ========================================== */
+/* Mobile */
+@media (max-width: 768px) {
+    /* ... tus media queries existentes ... */
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* ... tus media queries existentes ... */
+}
+
+/* Restaurar newsletter/suscripción */
+.newsletter {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.newsletter h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter input[type="email"] {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.newsletter button {
+    padding: 12px 24px;
+    background-color: #4a90e2;
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+/* Ajustar el título de Filosofía Institucional */
+.--section-title {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 4rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* Ajustar el texto de la filosofía institucional */
+.--section-desc {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1.25rem;
+    color: var(--white);
+    font-weight: 500;
+}
+
+/* Asegurar que los textos del hero sean consistentes */
+.--title {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 60px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.--desc {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.--section {
+    padding-top: 80px;  /* Reducimos de 120px a 80px */
+    padding-bottom: 40px;  /* Reducimos de 60px a 40px */
+}
+
+/* También podemos ajustar el margen superior de la sección de filosofía */
+#filosofia {
+    margin-top: 40px;  /* Reducimos de 60px a 40px */
+}
